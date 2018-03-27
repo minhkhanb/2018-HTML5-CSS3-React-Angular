@@ -1,0 +1,681 @@
+
+ <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+<meta charset="UTF-8"/>
+<title>HTML5 Tutorial for Beginners | CSS3 Tutorial</title>
+<meta name="alexaVerifyID" content="0rf7Be0TKZlD88e4khf_s5eUtK0"/>
+<meta name="google-site-verification" content="UItLQqO4a_ooJdxaZpKRZzeHeoIfe4x99EZHHF776jU"/>
+<meta name="keywords" content="html5 tutorial, css3 tutorial, html5 tutorial pdf, css3 tutorial pdf, html5 tutorial for beginners, css3 tutorial for beginners, html5, css3, tutorial"/>
+<meta name="description" content="Html5 and Css3 tutorial has been developed for those who is at the initial stage of learning HTML5. A beginner may have solid understanding with it's examples and demos."/>
+
+        <!-- Mobile Specific Metas
+    ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+         <!-- CSS
+         ================================================== -->
+
+   <link rel="start" href="http://www.html5andcss3.org/"> 
+    <link rel="next" href="http://www.html5andcss3.org/html5history.php"> 
+    <link rel="copyright" href="http://www.html5andcss3.org/tc.php"> 
+    <link rel="prefetch" href="http://www.html5andcss3.org/html5history.php">
+    <link rel="apple-touch-icon" href="icon-iphone.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="icon-ipad.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="icon-iphone4.png"/>
+<link rel="shortcut icon" href="images/html5_logo.ico"/>
+    
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <!-- Animation -->
+        <link rel="stylesheet" href="css/animate.css" />
+        <!-- Owl Carousel -->
+        <link rel="stylesheet" href="css/owl.carousel.css"/>
+         <link rel="stylesheet" href="css/owl.theme.css"/>
+         <!-- Pretty Photo -->
+         <link rel="stylesheet" href="css/prettyPhoto.css"/>
+         <link rel="stylesheet" href="css/flexslider.css"/>
+         <link rel="stylesheet" href="css/red.css"/>
+
+        <!-- Template styles-->
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,500' rel='stylesheet' type='text/css'>
+    </head>
+
+ <body data-spy="scroll" data-target=".navbar-fixed-top">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <header id="header" class="navbar-fixed-top navbar-inverse video-menu" role="banner">
+    	<div class="container">
+    		<!-- <div class="row"> -->
+                 <nav class="">
+<div id="logo">				            
+							<a class="navbar-brand" href="http://www.html5andcss3.org">
+                                <img src="images/logo.png" alt="Html5 Tutorial" class="img-responsive">
+                        </a></div>
+<label for="drop" class="toggle"><i class="fa fa-bars"></i></label>
+  <input type="checkbox" id="drop" />
+				 <ul class="nav navbar-nav navbar-right menu">
+              <li><a href="http://www.html5andcss3.org/html5history.php">Html5</a></li>
+              <li><a href="http://www.html5andcss3.org/css3history.php">css3</a></li>
+              <li><a href="http://www.html5andcss3.org/html5tutorialpdf.php">PDF Version</a></li>
+              <li><a href="http://blogs.html5andcss3.org">Blogs</a></li>
+              <li><a href="#">Web Services</a></li>
+                        </ul>
+                     </nav>
+                </div><!-- /.container-fluid -->
+</header>
+ <!-- Slider start -->
+    <section id="home" class="hero landing hero-section">
+        <div class="video-background-container">
+
+<canvas id="c"></canvas>
+<script type="text/javascript">
+		var c = document.getElementById("c");
+		c.height = window.innerHeight;
+		c.width = window.innerWidth;
+
+		var drop_size = 12;
+		var columns = c.width/drop_size;
+
+		var chinese = "html5css3html5css3html5css3html5css3html5css3";
+		chinese = chinese.split("");
+
+		var drops = [];
+		for(var i = 0; i < columns; i++)
+			drops[i] = 1; //y coordinate - same for everyone at the starting. The index contains the x coordinate
+
+		ctx = c.getContext('2d');
+
+		function draw()
+		{
+			ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+			ctx.fillRect(0, 0, c.width, c.height);
+
+			ctx.fillStyle = "#0f0";
+			ctx.font= drop_size + "px arial";
+			for(var i = 0; i < drops.length; i++)
+			{
+				text = chinese[Math.floor(Math.random()*chinese.length)];
+				ctx.fillText(text, i*drop_size, drops[i]*drop_size);
+
+				if(drops[i]*drop_size > c.height && Math.random() > 0.975)
+					drops[i] = 0;
+
+				drops[i]++;
+			}
+
+		}
+
+		setInterval(draw, 33);
+
+	</script>
+        </div> 
+
+        <div class="parallax-overlay"></div>
+
+        <div class="container">
+            <div class="hero-content text-center">
+                <div class="hero-text wow fadeIn" data-wow-delay=".8s">
+                    <h3 class="hero-title"><span>Html5</span> and <span>CSS3</span> Tutorial</h3>
+                    <p class="hero-description">A tutorial for beginners and experts with live examples and demos</p>
+                    <p class="hero-buttons">
+                        <a href="html5history.php" class="btn btn-main featured">
+                            <strong>HTML5 Tutorial </strong> </i>
+                        </a>
+                         <a href="css3history.php" class="btn btn-main featured">
+                            <strong>CSS3 Tutorial</strong> </i>
+                        </a>
+
+                    </p>
+                    <p class="img-responsive"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- New_big -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9530956525786032"
+     data-ad-slot="4142537103"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></p>
+                </div><!--/ Hero text end -->
+            </div><!--/ Hero content end -->
+        </div><!--/ Container end -->
+    </section><!--/ Home end -->
+
+
+
+
+
+<section id="footer">
+    <div class="footer_top1">
+        <div class="container">
+            <div class="row">
+                                <center><h3 class="menu_head1">HTML5 Elements &#8212; Quick References</h3></center>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer_menu1">
+                        <ul>
+<li><a href="html5doctype.php">!DOCTYPE</a></li>
+<li><a href="html5article.php">article</a></li>
+<li><a href="html5aside.php">aside</a></li>
+<li><a href="html5audio.php">audio</a></li>
+<li><a href="html5bdi.php">bdi</a></li>
+<li><a href="html5canvas.php">canvas</a></li>
+<li><a href="html5command.php">command</a></li>
+<li><a href="html5datalist.php">datalist</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer_menu1">
+                        <ul>
+<li><a href="html5details.php">details</a></li>
+<li><a href="html5embed.php">embed</a></li>
+<li><a href="html5figcaption.php">figcaption</a></li>
+<li><a href="html5figure.php">figure</a></li>
+<li><a href="html5footer.php">footer</a></li>
+<li><a href="html5header.php">header</a></li>
+<li><a href="html5hgroup.php">hgroup</a></li>
+<li><a href="html5keygen.php">keygen</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="col-md-3 col-sm-6">
+                    <div class="footer_menu1">
+                        <ul>
+<li><a href="html5mark.php">mark</a></li>
+<li><a href="html5main.php">main</a></li>
+<li><a href="html5menu.php">menu</a></li>
+<li><a href="html5meter.php">meter</a></li>
+<li><a href="html5nav.php">nav</a></li>
+<li><a href="html5output.php">output</a></li>
+<li><a href="html5progress.php">progress</a></li>
+<li><a href="html5ruby.php">ruby</a></li>
+                        </ul>
+                    </div>
+                </div>                               
+              
+                <div class="col-md-3 col-sm-6">
+                    <div class="footer_menu1">
+                        <ul>
+<li><a href="html5section.php">section</a></li>
+<li><a href="html5source.php">source</a></li>
+<li><a href="html5summary.php">summary</a></li>
+<li><a href="html5svg.php">svg</a></li>
+<li><a href="html5time.php">time</a></li>
+<li><a href="html5track.php">track</a></li>
+<li><a href="html5video.php">video</a></li>
+<li><a href="html5wbr.php">wbr</a></li>
+                        </ul>
+                    </div>
+                </div>                               
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<!-- Portfolio works Start -->
+
+    <section id="portfolio">
+   			<div class="text-center">
+              <ul class="portfolio-wrap" id="portfolio_items">
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio identity web-design bg-magento">
+                   <a href="html5history.php">
+                    <i class="fa fa-eye">
+                    </i>
+                    <span class="name-feature">HTML5 Hisotry</span>
+                    </a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic bg-blue">
+<a href="whatishtml5.php">
+<i class="fa fa-question">
+</i>
+<span class="name-feature">What is HTML5</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic logo bg-magento">
+                       <a href="html5newelements.php">
+<i class="fa fa-folder-open">
+</i>
+<span class="name-feature">New Elements</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design identity bg-blue">
+<a href="html5draganddrop.php">
+<i class="fa fa-exchange">
+</i>
+<span class="name-feature">Drag and Drop</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo web-design bg-blue">
+                        <a href="html5geolocation.php">
+<i class="fa fa-map-marker">
+</i>
+<span class="name-feature">Geolocation</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic bg-magento">
+<a href="html5videodom.php">
+<i class="fa fa-video-camera">
+</i>
+<span class="name-feature">Video Dom</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic identity bg-blue">
+                        <a href="html5webstorage.php">
+<i class="fa fa-briefcase">
+</i>
+<span class="name-feature">Web Storage</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-magento">
+                        <a href="html5appcache.php">
+<i class="fa fa-bookmark">
+</i>
+<span class="name-feature">Application Cache</span>
+</a>
+                    </li>
+                    
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-magento">
+    <a href="http://www.html5andcss3.org/html5form.php">
+<i class="fa fa-credit-card">
+</i>
+<span class="name-feature">Form Attributes</span>
+</a>
+                    </li>
+                    
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-blue">
+                        <a href="http://www.html5andcss3.org/html5canvas.php">
+<i class="fa fa-picture-o">
+</i>
+<span class="name-feature">Canvas Elements</span>
+</a>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+        </div> <!-- Container Full End -->
+</section>  <!-- Portfolio Section End -->
+
+<div class="clearfix"></div>
+
+
+<div class="clearfix"></div>
+<section id="video-fact">
+    <div class="container">
+         <div class="row">
+         
+                 <div class="col-md-6">
+                    <div class="landing-video">
+                        <div class="wow fadeIn" data-wow-duration="1s">
+                                <!-- Change the url -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9530956525786032" data-ad-slot="7673863617">
+</ins>
+<script>(adsbygoogle=window.adsbygoogle || []).push({});</script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-text">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading p2 active" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                              A Brief Introduction about HTML5
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body p3">
+                          <blockquote>
+<p>HTML5 is a core technology markup language of the Internet used for structuring and presenting content for the World Wide Web.</p>
+<p class="about-auther"><a href="https://en.wikipedia.org/wiki/HTML5" rel="nofollow">Source: en.wikipedia.org/wiki/HTML5 &#8212; wikipedia</a></p>
+</blockquote>
+<p><a href="http://www.html5andcss3.org">html5andcss3.org</a> has been developed for those who is at the initial stage of learning <strong>HTML5</strong>. This Html5 tutorial will start your adventure from the very beginning level. And be sure, you will have a solid understanding of creating a webpage soon.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div> 
+        </div><!-- row End -->
+    </div>
+</section>
+
+
+
+
+    <section id="portfolio">
+   			<div class="text-center">
+              <ul class="portfolio-wrap" id="portfolio_items">
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio identity web-design bg-magento">
+<a href="css3history.php">
+<i class="fa fa-eye">
+</i>
+<span class="name-feature">CSS3 History</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic bg-blue">
+<a href="whatiscss3.php">
+<i class="fa fa-question">
+</i>
+<span class="name-feature">What is CSS3</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic logo bg-magento">
+<a href="css3animation.php">
+<i class="fa fa-magic">
+</i>
+<span class="name-feature">CSS3 Animation</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design identity bg-blue">
+<a href="css3border.php">
+<i class="fa fa-square-o">
+</i>
+<span class="name-feature">CSS3 Border</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo web-design bg-blue">
+<a href="css3background.php">
+<i class="fa fa-laptop">
+</i>
+<span class="name-feature">CSS3 Background</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio logo graphic bg-magento">
+<a href="css3font.php">
+<i class="fa fa-font">
+</i>
+<span class="name-feature">CSS3 Font</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio graphic identity bg-blue">
+<a href="css3transitions.php">
+<i class="fa fa-film">
+</i>
+<span class="name-feature">CSS3 Transition Effects</span>
+</a>
+                    </li>
+
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-magento">
+<a href="css3userinterface.php">
+<i class="fa fa-user">
+</i>
+<span class="name-feature">CSS3 User Interface</span>
+</a>
+                    </li>
+                    
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-magento">
+<a href="css32dtransform.php">
+<i class="fa fa-cog">
+</i>
+<span class="name-feature">CSS3 2D Transform</span>
+</a>
+                    </li>
+                    
+                    <li class="col-md-3 col-xs-12 col-sm-6 single-portfolio web-design graphic bg-blue">
+<a href="css33dtransform.php">
+<i class="fa fa-asterisk">
+</i>
+<span class="name-feature">CSS3 3D Transform</span>
+</a>
+
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                </ul>
+        </div> <!-- Container Full End -->
+</section>  <!-- Portfolio Section End -->
+
+
+
+
+
+<section id="video-fact">
+    <div class="container">
+         <div class="row">
+                 <div class="col-md-6">
+                    <div class="landing-video">
+                        <div class="wow fadeIn" data-wow-duration="1s">
+                                <!-- Change the url -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-9530956525786032" data-ad-slot="7673863617">
+</ins>
+<script>(adsbygoogle=window.adsbygoogle || []).push({});</script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-text">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-default">
+                        <div class="panel-heading p2 active" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                              A Brief Introduction about CSS3
+                          </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                          <div class="panel-body p3">
+                          <blockquote>
+<p>Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup language.</p>
+<p class="about-auther"><a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" rel="nofollow">Source: en.wikipedia.org/wiki/Cascading_Style_Sheets &#8212; wikipedia</a></p>
+</blockquote>
+<p>Through this Css3 tutorial, our aim is to give you the complete knowledge about the CSS3 specification. On completion of this tutorial, you will have an expert knowledge about making a website soon.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div> 
+        </div><!-- row End -->
+    </div>
+</section>
+
+<div class="clearfix"></div>
+
+<!-- Footer Area Start -->
+
+<section id="footer">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">Main Menu</h3>
+                    <div class="footer_menu">
+                        <ul>
+               <li><a href="http://www.html5andcss3.org/html5history.php">Html5</a></li>
+              <li><a href="http://www.html5andcss3.org/css3history.php">css3</a></li>
+              <li><a href="http://www.html5andcss3.org/html5tutorialpdf.php">Html5 &amp; Css3 PDF Version</a></li>
+              <li><a href="http://blogs.html5andcss3.org">Blogs</a></li>
+              <li><a href="#">Web Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">Useful Links</h3>
+                    <div class="footer_menu">
+                        <ul>
+                          <li><a href="http://www.html5andcss3.org">Home</a></li>
+                            <li><a href="http://www.html5andcss3.org/tc.php">Copyright</a></li>
+                            <li><a href="http://www.html5andcss3.org/privacypolicy.php">Privacy Policy</a></li>
+                            <li><a href="http://www.html5andcss3.org/contact.php">Feedback</a></li>
+              <li><a href="http://www.html5andcss3.org/contact.php">Contact us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">Contact us</h3>
+                    <div class="footer_menu_contact">
+                        <ul>
+                            <li> <i class="fa fa-home"></i>
+                                <span> E/130, Jyotipuram, Jagdeo Path, Bailey Road, Patna - 800014 </span></li>
+                            <li><i class="fa fa-globe"></i>
+                                <span> +91-7549234821</span></li>
+                            <li><i class="fa fa-phone"></i>
+                                <span> info@html5andcss3.org</span></li>
+                            <li><i class="fa fa-map-marker"></i>
+                            <span> <a href="http://www.html5andcss3.org">html5andcss3.org</a></span></li>
+                            <li><i class="fa fa-skype"></i>
+                            <span> <a href="skype:swapnil.raja88?add">swapnil.raja88</a></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6">
+                    <h3 class="menu_head">Location</h3>
+                    <div class="footer_menu tags">
+			<div class="map" id="map"></div>
+</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_b">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer_bottom">
+                        <p class="text-block"> Copyright &copy; 2011-2016 <a href="https://plus.google.com/103545291826885724574/?rel=author">Swapnil Raja</a>. All rights reserved to <span><a href="http://www.olectratech.com" target="_blank">Olectra Technology</a></span></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer_mid pull-right">
+                        <ul class="social-contact list-inline">
+                            <li> <a href="https://www.facebook.com/Html5TutorialAndCss3Tutorial"><i class="fa fa-facebook"></i></a></li>
+                            <li> <a href="https://twitter.com/Html5andCss31"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="http://feeds.feedburner.com/Html5TutorialCss3Tutorial"><i class="fa fa-rss"></i></a></li>
+                            <li> <a href="https://plus.google.com/u/0/b/107868823629749078474/+Html5andcss3Org/posts"><i class="fa fa-google-plus"></i> </a></li>
+                            <li><a href="https://www.linkedin.com/company/html5-tutorial"> <i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://www.pinterest.com/swapnilraja/"> <i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Area End -->
+
+
+
+<!-- Back To Top Button -->
+       <!--  <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+                <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+            </div> -->
+    <div id="back-top">
+        <a href="#slider_part" class="scroll" data-scroll>
+            <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-up"></i></button>
+        </a>
+    </div>
+    <!-- End Back To Top Button -->
+
+
+
+<!-- Javascript Files
+    ================================================== -->
+    <!-- initialize jQuery Library -->
+
+		<!-- initialize jQuery Library -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+        <!-- Bootstrap jQuery -->
+         <script src="js/bootstrap.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Isotope -->
+        <script src="js/jquery.isotope.js"></script>
+        <!-- Pretty Photo -->
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+        <!-- SmoothScroll -->
+        <script type="text/javascript" src="js/smooth-scroll.js"></script>
+        <!-- Image Fancybox -->
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.5"></script>
+        <!-- Counter  -->
+        <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="js/waypoints.min.js"></script>
+        <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+   		<!-- PrettyPhoto -->
+        <script src="js/jquery.singlePageNav.js"></script>
+      	<!-- Wow Animation -->
+        <script type="js/javascript" src="js/wow.min.js"></script>
+        <!-- Google Map  Source -->
+        <script type="text/javascript" src="js/gmaps.js"></script>
+			<!-- Custom js -->
+        <script src="js/custom.js"></script>
+	<script>
+		// Google Map - with support of gmaps.js
+     var map;
+        map = new GMaps({
+          div: '#map',
+          lat: 28.5476941,
+          lng: 77.2926044,
+          scrollwheel: false,
+          panControl: false,
+          zoomControl: false,
+        });
+
+        map.addMarker({
+          lat: 28.5476941,
+          lng: 77.2926044,
+          title: 'Html5 and Css3 Tutorial',
+          infoWindow: { 
+            content: '<p> Html5 and Css3 Tutorial</p>'
+          },
+          icon: "images/map1.png"
+        });
+      	</script>
+ 
+    </body>
+</html>

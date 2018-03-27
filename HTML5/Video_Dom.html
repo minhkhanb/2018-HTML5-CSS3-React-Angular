@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Title name will go here</title>
+</head>
+
+<body>
+
+
+<video width="420" height="375" id="video1">
+
+    <source src="images/videos/sample_video.mp4" type="video/mp4" />
+    <source src="your ogg media file name" type="video/ogg" />
+    Your browser does not support the video tag.
+
+</video>
+
+<button onclick="playPause()">Play/Pause</button>
+<button onclick="makeBig()">Big</button>
+<button onclick="makeSmall()">Small</button>
+<button onclick="makeNormal()">Normal</button>
+
+
+<script type="text/javascript">
+
+    var myVideo=document.getElementById("video1");
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+
+    function makeBig()
+    {
+        myVideo.width=530;
+    }
+
+    function makeSmall()
+    {
+        myVideo.width=320;
+    }
+
+    function makeNormal()
+    {
+        myVideo.width=420;
+    }
+
+</script>
+
+</body>
+
+</html>
+
+
+

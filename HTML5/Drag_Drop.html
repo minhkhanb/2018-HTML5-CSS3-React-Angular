@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Title name will go here</title>
+
+    <style>
+
+        #div1 {width:200px;height:150px;padding:10px;border:1px solid green;}
+        #div2 {width:200px;height:150px;padding:10px;border:1px solid green;}
+
+    </style>
+
+    <script type="text/javascript">
+
+        function allowDrop(ev)
+        {
+            ev.preventDefault();
+        }
+        function drag(ev)
+        {
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function drop(ev)
+        {
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    <img id="drag1" src="images/html5_logo.png" alt="html5 tutorial" draggable="true" ondragstart="drag(event)" id="drag1"/>
+    <p>Drag the image to another DIV.</p>
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+
+</body>
+
+</html>
+
+

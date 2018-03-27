@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function clickCounter()
+        {
+            if(typeof(Storage)!=="undefined")
+            {
+                if (localStorage.clickcount)
+                {
+                    localStorage.clickcount=Number(localStorage.clickcount)+1;
+                }
+                else
+                {
+                    localStorage.clickcount=1;
+                }
+                document.getElementById("result").innerHTML="You have clicked the button " + localStorage.clickcount + " time(s).";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+</head>
+<body>
+<p><button onclick="clickCounter()" type="button">Increase Me !</button></p>
+<div id="result"></div>
+<p>Click the button to see the number increment.</p>
+<p>To check it close the browser or tab, and start again, you will be continued, from where you left.</p>
+</body>
+</html>
+
+
+
