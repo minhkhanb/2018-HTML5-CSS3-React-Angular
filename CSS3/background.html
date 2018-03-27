@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Title Name will go here</title>
+</head>
+
+<style>
+
+    #background_size
+    {
+        background:url(images/background/flower.png);
+        background-size:100px 40px;
+        -moz-background-size:100px 40px; /* Firefox 3.6 */
+        -webkit-background-size:100px 40px;
+        background-repeat:no-repeat;
+        padding-top:40px;
+    }
+
+    #backgroundorigin
+    {
+        border:1px dotted green;
+        padding:25px;
+        background-image:url('images/background/cborder.png');
+        background-repeat:no-repeat;
+        background-position:left;
+        background-origin:border-box;
+    }
+
+    #backgroundorigin1
+    {
+        border:1px dotted green;
+        padding:25px;
+        background-image:url('images/background/cborder.png');
+        background-repeat:no-repeat;
+        background-position:left;
+        background-origin:content-box;
+    }
+
+
+</style>
+
+<body>
+
+<div id="background_size"> </div>
+
+<div>
+    Here is the original image
+    <img src="images/background/flower.png" alt="image" title="original image"/>
+</div>
+
+<div id="backgroundorigin">
+    This div containing the image with border-box property.
+    This div containing the image with border-box property.
+    This div containing the image with border-box property.
+    This div containing the image with border-box property.
+</div>
+
+<div id="backgroundorigin1">
+    This div containing the image with content box property.
+    This div containing the image with content box property.
+    This div containing the image with content box property.
+    This div containing the image with content box property.
+</div>
+
+</body>
+
+</html>
+
+
